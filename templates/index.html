@@ -1,0 +1,299 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='scss/s.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>UNICARE</title>
+  </head>
+  <body>
+    <div class="container">
+    <button type="button" class="btn btn-link" onclick="getPatient();">Update Patient</button>
+    <button type="button" class="btn btn-primary" onclick="start_flow('configure');">UniNurse </button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('new_treatment');">New Treatment </button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('wake_up');">Wake Up</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('bed_time');">Bedtime</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('pre_breakfast');">Morning - Pre Meal</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('post_breakfast');">Morning - Post Meal</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('pre_lunch');">Midday - Pre Meal</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('post_lunch');">Midday - Post Meal</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('pre_dinner');">Dinner - Pre Meal</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('post_dinner');">Dinner - Post Meal</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('pre_workout');">Before Workout</button>
+    <button type="button" class="btn btn-secondary" onclick="start_flow('post_workout');">After Workout</button>
+    <button type="button" class="btn btn-link" onclick="reStart();">Reset</button>
+
+      <form action="/action_page.php">
+        <label for="fname">Patient  </label>
+        <input type="text" id="fname" name="fname" value="Samson"><br>
+        <label for="fname">Address  </label>
+        <input type="text" id="fname" name="fname" value="thane"><br>
+        <label for="phone">Mobile No.  </label>
+        <input type="text" id="phone" name="phone" value="123456789"><br><br>
+      </form>
+    </div>
+      <img onclick="toggle_visibility('chatWindow');" class="chat_button" src="{{ url_for('static',filename='imgs/chatbot.svg') }}"/>
+
+     <div>
+      <div id="chatWindow">
+
+        <div id="chatbox">
+          <h2><br>UNICARE-HEALTHCENTRE</h2>
+          
+          
+          
+        </div>
+        <div id="chathistory">
+        </div>
+        <div id="userInput">
+          <input id="textInput" type="text" name="msg" placeholder="Type & Press Enter " required>
+          
+          <!-- <button id="buttonInput" onclick="reStart();" value="restart">End</button> -->
+        </div>
+  
+        
+      </div>
+      <script>
+
+          function sleep(milliseconds) {
+            const date = Date.now();
+            let currentDate = null;
+            do {
+              currentDate = Date.now();
+            } while (currentDate - date < milliseconds);
+          }
+
+          // function test_welcome(num){
+          //     var msg = "";
+          //     $.get("/welcome_messages", { number: num }).done(function(data) {
+          //       console.log("welcome message");
+          //       console.log(data);
+          //       msg = data;
+                
+          //   });
+          //   console.log("returning " + msg);
+          //   return msg;
+          // }
+
+          function flow(type_, count, yes_ , no_) {
+            reStart();
+            $("#chathistory").empty();
+            console.log("flow");
+            var m = ""
+            botTyping();
+            $("#chathistory").append(typing);
+            for (let i = 0; i <= count; i++) {
+              
+              // sleep(500);
+              $.get("/welcome_messages", { number: i + 1, type:type_ }).done(function(data) {
+                console.log("welcome message");
+                console.log(data);
+                message = '<p class="botText"><span>' + data + '</span></p>'
+                $("#chathistory > .botTyping").remove();
+                $("#chathistory").append(message);
+
+                botTyping();
+                $("#chathistory").append(typing);
+
+                objDiv = document.getElementById("chathistory");
+                objDiv.scrollTop = objDiv.scrollHeight;
+
+                if (i == count) {
+                  m1 = '<button class="botButtons" mapto="' + yes_ + '" onclick="BotButtonClicked(this);">' + yes_ + '</button>'
+                  m2 = '<button class="botButtons" mapto="' + no_ + '" onclick="BotButtonClicked(this);">' + no_ + '</button>'
+                  message = m1 +  m2
+                  // Scroll to the bottom of the chatbox
+                  $("#chathistory > .botTyping").remove();
+                  $("#chathistory").append(message);
+                  objDiv = document.getElementById("chathistory");
+                  objDiv.scrollTop = objDiv.scrollHeight;
+                }
+            })
+                
+            }
+            // m1 = "Hello! Hemanth! Mr.Gupta has diagnosed you with MRI. Your Diginurse will be with you through out the treatment period overseeing your recovery."
+            // message = '<p class="botText"><span>' + m + '</span></p>'
+            // $("#chathistory").append(message);
+            // sleep(500);
+            // m2 = "During your treatment period I'll assist you with keep track of your medications, logging your vitals and symptoms and provide you with recommendations on your diet and lifestyle"
+            // message =  '<p class="botText"><span>' + m + '</span></p>'
+            
+            // $("#chathistory").append(message);
+            // m3 = "Are you ready to setup your personalized nursing plan? It’ll only take few minutes."
+            // message =  '<p class="botText"><span>' + m + '</span></p>'
+            // sleep(500);
+            // message = '<p class="botText"><span>' + message + '</span></p>'
+            // $("#chathistory").append(message);
+            // message = '<button class="botButtons" mapto="Yes" onclick="BotButtonClicked(this);">Yes</button>'
+            // message = message + '<button class="botButtons" mapto="No" onclick="BotButtonClicked(this);">No</button>'
+            // // Scroll to the bottom of the chatbox
+            // $("#chathistory").append(message);
+            // objDiv = document.getElementById("chathistory");
+            // objDiv.scrollTop = objDiv.scrollHeight;
+          }
+
+          // document.addEventListener("DOMContentLoaded", ready);
+        
+        function botTyping() {
+          typing = '<div class="botTyping"><span></span><span></span><span></span></div>';
+          return typing;
+        }
+        var g_name = "";
+        var g_phone = "";
+        var g_type = "";
+
+        function start_flow(type_) {
+          reStart();
+          $("#chathistory").empty();
+          console.log("flow");
+          var name = $("#fname").val();
+          var phone = $("#phone").val();
+          var rawText = "OK DigiNurse";
+          var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+          $("#textInput").val("");
+          g_name = name
+          g_phone =  phone
+          g_type = type_
+          var get_req = "/get/" + g_name+ "/"  + g_phone+ "/" + g_type+ "/" + rawText
+
+          if (rawText) {
+              $("#chathistory").append(userHtml);
+              // document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+              typing =  botTyping();
+              $("#chathistory").append(typing);
+
+              console.log()
+              objDiv = document.getElementById("chathistory");
+              objDiv.scrollTop = objDiv.scrollHeight;
+              $.get(get_req).done(function(data) {
+              var botHtml = data;
+              // console.log("adddd")
+
+              sleep(5);
+              $("#chathistory > .botTyping").remove();
+              $("#chathistory").append(botHtml);
+
+              objDiv = document.getElementById("chathistory");
+              objDiv.scrollTop = objDiv.scrollHeight;
+              // document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            });
+          }
+
+        }
+
+        function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+          $("#textInput").val("");
+          var get_req = "/get/" + g_name+ "/"  + g_phone+ "/" + g_type+ "/" + rawText
+          
+          if (rawText) {
+              $("#chathistory").append(userHtml);
+              // document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+              typing =  botTyping();
+              $("#chathistory").append(typing);
+
+              console.log()
+              objDiv = document.getElementById("chathistory");
+              objDiv.scrollTop = objDiv.scrollHeight;
+
+              $.get(get_req).done(function(data) {
+              var botHtml = data;
+              // console.log("adddd")
+
+              sleep(5);
+              $("#chathistory > .botTyping").remove();
+              $("#chathistory").append(botHtml);
+              
+              objDiv = document.getElementById("chathistory");
+              objDiv.scrollTop = objDiv.scrollHeight;
+              // document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            });
+          }
+
+        }
+        $("#textInput").keypress(function(e) {
+            if(e.which == 13) {
+                getBotResponse();
+            }
+        });
+        $("#buttonInput").click(function() {
+          
+          getBotResponse();
+        });
+
+        function reStart() {
+          $("#chathistory").empty();
+          $.get("/restart").done(function(data) {
+            console.log(data);
+          });
+        }
+
+        $("#fname").keypress(function(e) {
+            if(e.which == 13) {
+                reStart();
+            }
+        });
+        $("#phone").keypress(function(e) {
+            if(e.which == 13) {
+                reStart();
+            }
+        });
+
+        function getPatient() {
+          var name = $("#fname").val();
+          var phone = $("#phone").val();
+          $("#chathistory").empty();
+          $.get("/updatePatient", { name: name, phone:phone }).done(function(data) {
+            console.log(data);
+          });
+        }
+     
+        function BotButtonClicked(id){
+            mapto = id.outerHTML.split('class="botButtons"')[1]
+            console.log("MATTO")
+            console.log(mapto)
+            mapto = mapto.split('onclick=')[0]
+            mapto = mapto.replace('mapto="','')
+            mapto = mapto.replace("\"",'')
+
+            console.log("MATTO")
+            console.log(mapto)
+
+            document.getElementById("textInput").value = mapto
+            getBotResponse();
+            
+        };
+      
+      
+
+      </script>
+
+    </div>
+
+
+    <script type="text/javascript">
+          function toggle_visibility(id) {
+              var e = document.getElementById(id);
+              if(e.style.display == 'block')
+                  e.style.display = 'none';
+              else
+                  e.style.display = 'block';
+          }
+
+    </script>
+
+  </body>
+</html>

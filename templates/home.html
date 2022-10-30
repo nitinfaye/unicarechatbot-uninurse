@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+  
+    <!-- <script>
+        function myfun(btn){
+            chatbot = document.getElementById("chatbot")
+            input = document.getElementById("message")
+            input.value = btn['payload']
+    
+    
+            console.log(input.value)
+        };
+    </script>  -->
+  
+<form action="/" method="POST">
+    <div class="bottom_left">
+        <img class="chat_button" src="{{ url_for('static',filename='imgs/chatbot.svg') }}"/>
+    </div>
+    <div id="show"><img class="chat_button" src="{{ url_for('static',filename='imgs/chatbot.svg') }}" onclick="console.log('clicked')"/></div>
+    <div class="chat_area" style="display: none;">
+        <div class="head">
+            <div class="text">
+                <h1 style="text-align: center;">This is Head</h1>
+            </div>
+        </div>
+        <div class="chat_history">
+            
+            <p>Chat History</p>
+            {% if data %}
+            {% for each in data.json() %}
+                <p>{{ each['text'] }}</p><br>
+                {% if each['buttons'] %}
+                
+                    {% for btn in each['buttons'] %}
+                        
+                        <input type="button"  name="{{ btn['title'] }}" onclick="myfun({{btn}});" value="{{ btn['title'] }}"/>
+                        
+                    {% endfor %}
+                {% endif %}
+            
+                
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div class="chat_input" id="chat_input">
+            <input type="text"  id="message" name="message" placeholder="Press Enter To Send...">
+            <input type="submit" id="sendmsg" value="Send"/>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+  <script>
+        $(document).ready(function(){
+           
+            
+            
+                $('#show').click(function() {
+                        console.log("test")
+                        $('.chat_area').toggle("show");
+                        $(".chat_button").attr('src',"{{url_for('static',filename='imgs/chatbot_close.svg')}}");
+                        
+                        });
+                       
+                });
+
+                $("#sendmsg").click(function() {
+                        
+                        getResponse();
+                        });
+           
+        
+    </script>
+    <script>
+        function getResponse(){
+            var rawText = $("#message").val();
+            var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+            if (rawText.length>0){
+                $("#message").val("");
+                $(".chat_history").append(userHtml);
+                document.getElementById('chat_input').scrollIntoView({block: 'start', behavior: 'smooth'});
+                
+                $.ajax({
+
+                    type: "POST",
+                    url: "{{url_for('home')}}",
+                    data: JSON.stringify("test"),
+                    contentType: 'application/json;charset=UTF-8',
+                    success: function(result) {
+                        var botText = '<p class="botText"> '+result+' </p>'
+                        $(".chat_history").append(botText);
+                        
+                    }
+
+                })
+             
+            }
+               
+
+        }
+
+       
+       
+    </script>
+</body>
+</html>
+
+
+$.post("/", { message: rawText }).done(function(data) {
+    console.log(data)
+    var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+    $(".chat_history").append(botHtml);
+    document.getElementById('chat_input').scrollIntoView({block: 'start', behavior: 'smooth'});
+    });
+

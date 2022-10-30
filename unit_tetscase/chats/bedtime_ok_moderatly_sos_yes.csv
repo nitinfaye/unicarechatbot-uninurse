@@ -1,0 +1,14 @@
+user|OK DigiNurse
+bot|Before going to bed, i want to have one last check on your symptoms.
+Please enter your symptoms and vitals for bed_time.
+user|Ok go ahead
+bot|Are you having/feeling Head Ache ?
+user|Moderately
+bot|Are you having/feeling Weakness ?
+user|Moderately
+bot|what is the reading of your Temperature ?
+user|80
+bot|Did you take SOS medicine today ?
+user|Yes
+bot|Thanks Nitin! I have recorded your responses in your medical data logger.
+Good Night Nitin! Sleep tight. I'll see you in the morning.

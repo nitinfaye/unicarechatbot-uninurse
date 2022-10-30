@@ -1,0 +1,34 @@
+user|OK DigiNurse
+bot|During the morning post-meal you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for post_breakfast.
+user|Ok go ahead
+bot|Are you having/feeling Head Ache ?
+user|Not at all
+bot|During the Midday pre-meal you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for pre_lunch.
+user|Ok go ahead
+bot|Are you having/feeling Weakness ?
+user|Not at all
+bot|What is the reading of your BP ?
+user|80-120
+bot|During the Midday pot-meal you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for post_lunch.
+user|Ok go ahead
+bot|Are you having/feeling Head Ache ?
+user|Not at all
+bot|What is the reading of your weight ?
+user|65
+bot|What is the reading of your Temperature ?
+user|89
+bot|During the Pre-Dinner you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for pre_dinner.
+user|Ok go ahead
+bot|Are you having/feeling Nausea ?
+user|Not at all
+bot|During the Post-Dinner you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for post_dinner.
+user|Ok go ahead
+bot|What is the reading of your BP ?
+user|80-123
+bot|Thanks Nitin! I have recorded your responses in your medical data logger.
+Good Night Nitin! Sleep tight. I'll see you in the morning.

@@ -1,0 +1,36 @@
+user|OK DigiNurse
+bot|Before going to bed, i want to have one last check on your symptoms.
+Please enter your symptoms and vitals for bed_time.
+user|Ok go ahead
+bot|Are you having/feeling Head Ache ?
+user|Moderately
+bot|Are you having/feeling Weakness ?
+user|Moderately
+bot|what is the reading of your Temperature ?
+user|79
+bot|Did you take SOS medicine today ?
+user|Yes
+bot|During the morning pre-meal you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for pre_breakfast.
+user|Ok go ahead
+bot|Are you having/feeling Nausea ?
+user|Moderately
+bot|What is the reading of your BP ?
+user|79
+bot|During the morning post-meal you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for post_breakfast.
+user|No
+bot|During the Midday pre-meal you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for pre_lunch.
+user|No
+bot|During the Midday pot-meal you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for post_lunch.
+user|No
+bot|During the Pre-Dinner you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for pre_dinner.
+user|No
+bot|During the Post-Dinner you missed out on reporting your medicine, symptoms and vitals. Please share the information so that we can plan your treatment in a better way.
+Please enter your symptoms and vitals for post_dinner.
+user|No
+bot|Thanks Vikas! I have recorded your responses in your medical data logger.
+Good Night Vikas! Sleep tight. I'll see you in the morning.

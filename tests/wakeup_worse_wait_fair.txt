@@ -1,0 +1,20 @@
+user:OK DigiNurse
+bot:Good Morning Nitin! How are you feeling today ?
+user:I feel worse
+bot:Sorry, I can't get you, please repeat.
+I'm sorry to hear that
+If you are feeling high discomfort......
+Yesterday, you were not feeling well ?
+Do you want to get in touch with doctor?
+user:No, I want to wait
+bot:Sure, please let me know if your discomfort increases.
+Yesterday you were not well. Do you want to connect with your doctor ?
+How was your sleep last night ?
+user:Fair
+bot:I am sorry! I hope, it'll get better as we move along in your treatment.
+I want to remind you about your schedule.
+List of tests for the day.
+Medical test - Sugar Test
+Medical test - Sugar Test
+Today there is a scheduled followup with the doctor.
+Thank you, talk to me again

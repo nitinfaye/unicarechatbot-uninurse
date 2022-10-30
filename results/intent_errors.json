@@ -1,0 +1,322 @@
+[
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "how_intense",
+      "confidence": 0.3777865171432495
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "not_better",
+      "confidence": 0.3320820927619934
+    }
+  },
+  {
+    "text": "you are right",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.8334265351295471
+    }
+  },
+  {
+    "text": "not now",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "not_better",
+      "confidence": 0.9600024819374084
+    }
+  },
+  {
+    "text": "low",
+    "intent": "how_intense",
+    "intent_prediction": {
+      "name": "better",
+      "confidence": 0.5122844576835632
+    }
+  },
+  {
+    "text": "i'm not feeling better now",
+    "intent": "not_better",
+    "intent_prediction": {
+      "name": "better",
+      "confidence": 0.6294541954994202
+    }
+  },
+  {
+    "text": "good one",
+    "intent": "all_fine",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.383283793926239
+    }
+  },
+  {
+    "text": "it was not fair",
+    "intent": "worse",
+    "intent_prediction": {
+      "name": "not_better",
+      "confidence": 0.611515998840332
+    }
+  },
+  {
+    "text": "ok",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "digi_nurse_flow",
+      "confidence": 0.43941137194633484
+    }
+  },
+  {
+    "text": "frequently",
+    "intent": "how_often",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3372544050216675
+    }
+  },
+  {
+    "text": "done",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6561524271965027
+    }
+  },
+  {
+    "text": "no major exertion on body",
+    "intent": "how_intense",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8758436441421509
+    }
+  },
+  {
+    "text": "i am fine",
+    "intent": "better",
+    "intent_prediction": {
+      "name": "all_fine",
+      "confidence": 0.7383009791374207
+    }
+  },
+  {
+    "text": "I feel worse",
+    "intent": "not_better",
+    "intent_prediction": {
+      "name": "better",
+      "confidence": 0.35983723402023315
+    }
+  },
+  {
+    "text": "everything is feeling better now",
+    "intent": "all_fine",
+    "intent_prediction": {
+      "name": "better",
+      "confidence": 0.5026200413703918
+    }
+  },
+  {
+    "text": "very nice",
+    "intent": "all_fine",
+    "intent_prediction": {
+      "name": "how_intense",
+      "confidence": 0.36434686183929443
+    }
+  },
+  {
+    "text": "no not good",
+    "intent": "worse",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6566516160964966
+    }
+  },
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "all_fine",
+      "confidence": 0.7645063400268555
+    }
+  },
+  {
+    "text": "ha i do it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7632614970207214
+    }
+  },
+  {
+    "text": "sure",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "digi_nurse_flow",
+      "confidence": 0.28054720163345337
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "how_often",
+      "confidence": 0.4743900001049042
+    }
+  },
+  {
+    "text": "it has subsided",
+    "intent": "better",
+    "intent_prediction": {
+      "name": "worse",
+      "confidence": 0.30031469464302063
+    }
+  },
+  {
+    "text": "it is worse than previous one",
+    "intent": "not_better",
+    "intent_prediction": {
+      "name": "all_fine",
+      "confidence": 0.6123944520950317
+    }
+  },
+  {
+    "text": "not well",
+    "intent": "not_better",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7534263730049133
+    }
+  },
+  {
+    "text": "fine",
+    "intent": "all_fine",
+    "intent_prediction": {
+      "name": "better",
+      "confidence": 0.9909419417381287
+    }
+  },
+  {
+    "text": "worse",
+    "intent": "worse",
+    "intent_prediction": {
+      "name": "digi_nurse_flow",
+      "confidence": 0.3416292369365692
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "worse",
+      "confidence": 0.39881134033203125
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "not_better",
+      "confidence": 0.4594704806804657
+    }
+  },
+  {
+    "text": "occasionally",
+    "intent": "how_often",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.18262144923210144
+    }
+  },
+  {
+    "text": "no no it has become worse now",
+    "intent": "not_better",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9677850008010864
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "not_better",
+    "intent_prediction": {
+      "name": "all_fine",
+      "confidence": 0.4376833438873291
+    }
+  },
+  {
+    "text": "ya it was good",
+    "intent": "all_fine",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7406966090202332
+    }
+  },
+  {
+    "text": "No, I want to wait for a couple of hours",
+    "intent": "remind_me",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6316400170326233
+    }
+  },
+  {
+    "text": "i am lazy",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "better",
+      "confidence": 0.45785143971443176
+    }
+  },
+  {
+    "text": "daily",
+    "intent": "how_often",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6217508316040039
+    }
+  },
+  {
+    "text": "Sister",
+    "intent": "digi_nurse_flow",
+    "intent_prediction": {
+      "name": "better",
+      "confidence": 0.2304973602294922
+    }
+  },
+  {
+    "text": "you are great",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6764978766441345
+    }
+  },
+  {
+    "text": "not better",
+    "intent": "not_better",
+    "intent_prediction": {
+      "name": "better",
+      "confidence": 0.5807541012763977
+    }
+  },
+  {
+    "text": "good",
+    "intent": "all_fine",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.3155834972858429
+    }
+  },
+  {
+    "text": "it was horrible",
+    "intent": "worse",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.35867443680763245
+    }
+  }
+]

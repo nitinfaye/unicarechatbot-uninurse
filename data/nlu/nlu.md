@@ -1,0 +1,279 @@
+## intent:greet
+- hey
+- hello
+- hi
+- good morning
+- good evening
+- hey there
+
+## intent:goodbye
+- bye
+- goodbye
+- see you around
+- see you later
+
+## intent:affirm
+- yes
+- indeed
+- of course
+- that sounds good
+- correct
+- yes you have my consent
+- you are right
+- ya you have my consent
+- ya ya
+- yep you have
+- yep
+- yes I do
+- yes I do smoke
+- yes I do smoke weed
+- yes I do smoke marijuana
+- yes i will smoke
+- of course I will smoke
+- of course I will smoke weed
+- yes i drink alcohol
+- ya i drink
+- yes i drink
+- yes i drink beer
+- yes i drink wine
+- yes i drink liquor
+- yes i drink alcohol
+- ya i take it
+- ya i drink it
+- yes i will workout
+- yes i will do workout
+- yes i do workout
+- ha i do it
+- yes i will do it
+- sure
+- goahead
+- go ahead
+- yup
+- ok
+- please go ahead
+
+## intent:deny
+- no
+- never
+- I don't think so
+- don't like that
+- no way
+- not really
+- no I don't
+- no I don't smoke
+- no I don't smoke
+- no you dont have my consent
+- no you don't have my consent
+- no you don't have
+- no no
+- no no you don't have
+- no no you don't have my consent
+- no i dont drink
+- no i dont drink alcohol
+- no i dont drink it
+- no i dont take it
+- no i dont workout
+- no i dont do workout
+- no i dont do it
+- no i dont
+- i am lazy
+- i am not
+- i'm lazy to do it
+- not now
+- later
+- nop
+- nope
+
+
+## intent:times
+- [7:00](time)
+- [7:30](time)
+- [8:00](time)
+- [8:30](time)
+- [9:00](time)
+- [9:30](time)
+- [10:00](time)
+- [10:30](time)
+- [11:00](time)
+- [11:30](time)
+- [12:00](time)
+- [12:30](time)
+- i [wake up](routines) at [7:00](time)
+- i [sleep](routines) at [7:30](time)
+- i [wake up](routines) at [8:00](time)
+- i [wake up](routines) at [7](time)
+- i [sleep](routines) at [7](time)
+- i [wake up](routines) at [8](time)
+## intent:change_routine
+- change my [wake up](routines) time to [9](time)
+- change my [sleep](routines) time to [9](time)
+- change my [wake up](routines) time to [10:00](time)
+- change my [sleep](routines) time to [10:00](time)
+- change my [wakeup](routines) time to [9](time)
+- change my [sleep](routines) time to [9](time)
+- change my [wakeup](routines) time to [10:00](time)
+- change my [sleep](routines) time to [10:00](time)
+- change [wake up](routines) time to [9](time)
+- change [sleep](routines) time to [9](time)
+- change [wake up](routines) time to [10:00](time)
+- change [sleep](routines) time to [10:00](time)
+- change [wakeup](routines) time to [9](time)
+- change [sleep](routines) time to [9](time)
+- change [wakeup](routines) time to [10:00](time)
+- change [sleep](routines) time to [10:00](time)
+- change my [wake up](routines)
+- change my [sleep](routines)
+- change my [wake up](routines)
+- change my [sleep](routines)
+- change my [wakeup](routines)
+- change my [sleep](routines)
+- change my [wakeup](routines)
+- change my [sleep](routines)
+- change [wake up](routines)
+- change [sleep](routines)
+- change [wake up](routines)
+- change [sleep](routines)
+- change [wakeup](routines)
+- change [sleep](routines)
+- change [wakeup](routines)
+- change [sleep](routines)
+- change my [dinner](routines) time to [9](time)
+- change my [bed](routines) time to [9](time)
+- change my [dinner](routines) time to [10:00](time)
+- change my [bed](routines) time to [10:00](time)
+- change my [lunch](routines) time to [9](time)
+- change my [bed](routines) time to [9](time)
+- change my [lunch](routines) time to [10:00](time)
+- change my [bed](routines) time to [10:00](time)
+- change [dinner](routines) time to [9](time)
+- change [bed](routines) time to [9](time)
+- change [dinner](routines) time to [10:00](time)
+- change [bed](routines) time to [10:00](time)
+- change [lunch](routines) time to [9](time)
+- change [bed](routines) time to [9](time)
+- change [lunch](routines) time to [10:00](time)
+- change [bed](routines) time to [10:00](time)
+- change my [dinner](routines)
+- change my [bed](routines)
+- change my [dinner](routines)
+- change my [bed](routines)
+- change my [lunch](routines)
+- change my [bed](routines)
+- change my [lunch](routines)
+- change my [bed](routines)
+- change [dinner](routines)
+- change [bed](routines)
+- change [dinner](routines)
+- change [bed](routines)
+- change [lunch](routines)
+- change [bed](routines)
+- change [lunch](routines)
+- change [bed](routines)
+- change my [dinner](routines) time to [9](time)
+- change my [break fast](routines) time to [9](time)
+- change my [breakfast](routines) time to [9](time)
+- change my [dinner](routines) time to [10:00](time)
+- change my [break fast](routines) time to [10:00](time)
+- change my [breakfast](routines) time to [10:00](time)
+- change my [work out](routines) time to [9](time)
+- change my [workout](routines) time to [9](time)
+- change my [break fast](routines) time to [9](time)
+- change my [breakfast](routines) time to [9](time)
+- change my [work out](routines) time to [10:00](time)
+- change my [workout](routines) time to [10:00](time)
+- change my [break fast](routines) time to [10:00](time)
+- change my [breakfast](routines) time to [10:00](time)
+- change [dinner](routines) time to [9](time)
+- change [break fast](routines) time to [9](time)
+- change [breakfast](routines) time to [9](time)
+- change [dinner](routines) time to [10:00](time)
+- change [break fast](routines) time to [10:00](time)
+- change [breakfast](routines) time to [10:00](time)
+- change [work out](routines) time to [9](time)
+- change [workout](routines) time to [9](time)
+- change [break fast](routines) time to [9](time)
+- change [breakfast](routines) time to [9](time)
+- change [work out](routines) time to [10:00](time)
+- change [workout](routines) time to [10:00](time)
+- change [break fast](routines) time to [10:00](time)
+- change [breakfast](routines) time to [10:00](time)
+- change my [dinner](routines)
+- change my [break fast](routines)
+- change my [breakfast](routines)
+- change my [dinner](routines)
+- change my [break fast](routines)
+- change my [breakfast](routines)
+- change my [work out](routines)
+- change my [workout](routines)
+- change my [break fast](routines)
+- change my [breakfast](routines)
+- change my [work out](routines)
+- change my [workout](routines)
+- change my [break fast](routines)
+- change my [breakfast](routines)
+- change [dinner](routines)
+- change [break fast](routines)
+- change [breakfast](routines)
+- change [dinner](routines)
+- change [break fast](routines)
+- change [breakfast](routines)
+- change [work out](routines)
+- change [workout](routines)
+- change [break fast](routines)
+- change [breakfast](routines)
+- change [work out](routines)
+- change [workout](routines)
+- change [break fast](routines)
+- change [breakfast](routines)
+- change [drinking](routines)
+- change [smoking](routines)
+- change [lunch](routines)
+- change my [smoking](routines)
+- change my [smoking](routines)
+- change my [drinking](routines) behavior
+- change my [drinking](routines) behavior
+
+## intent:how_often
+- every day
+- every week
+- every month
+- daily
+- frequently
+- occasionally
+##intent:digi_nurse_flow
+- Ok DigiNurse
+- DigiNurse
+- Digi Nurse
+- Nurse
+- Sister
+## intent:thanks
+- thanks
+- Thankyou
+- Thank you
+- you are great
+- good job
+- great job
+- good work
+- great work
+- well done
+- done
+
+##synonym:wakeup
+- wake-up
+- wake_up
+- wake up
+
+##synonym:workout
+- work out
+- work_out
+- excercise
+- gym
+
+## synonym:bed
+- sleep
+- bedtime
+
+## synonym:breakfast
+- break fast
+- break_fast
+- break-fast

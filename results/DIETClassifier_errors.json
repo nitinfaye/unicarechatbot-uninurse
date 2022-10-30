@@ -1,0 +1,39 @@
+[
+  {
+    "text": "good work",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "routines",
+        "start": 5,
+        "end": 9,
+        "value": "work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "change my workout",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "workout",
+        "entity": "routines"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "change workout",
+    "entities": [
+      {
+        "start": 7,
+        "end": 14,
+        "value": "workout",
+        "entity": "routines"
+      }
+    ],
+    "predicted_entities": []
+  }
+]
