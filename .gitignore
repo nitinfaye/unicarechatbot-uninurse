@@ -1,0 +1,7 @@
+**/__pycache__/**
+/nohup
+models
+models/**.tar.gz
+**.log
+actions/__pycache__/**.pyc
+addons/__pycache__/**.pyc

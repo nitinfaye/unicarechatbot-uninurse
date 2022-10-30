@@ -1,0 +1,234 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - times
+  - how_often
+  - how_intense
+  - change_routine
+  - better
+  - not_better
+  - all_fine
+  - worse
+  - remind_me
+  - wait
+  - digi_nurse_flow
+  - out_of_context
+  - thanks
+  
+entities:
+  - time
+  - routines
+
+slots:
+    sleep_time:
+      type: unfeaturized
+    wakeup_time:
+      type: unfeaturized
+    breakfast_time:
+      type: unfeaturized
+    lunch_time:
+      type: unfeaturized
+    dinner_time:
+      type: unfeaturized
+    smoking:
+      type: unfeaturized
+    smoke_freq:
+      type: unfeaturized
+    drinking:
+      type: unfeaturized
+    drink_freq:
+      type: unfeaturized
+    workingout:
+      type: unfeaturized
+    workout_freq:
+      type: unfeaturized
+    intence:
+      type: unfeaturized
+    routines:
+      type: categorical
+      values:
+        - wake up
+        - sleep
+        - bed
+        - dinner
+        - breakfast
+        - workout
+        - lunch
+        - smoking
+        - drinking
+    change_field:
+      type: unfeaturized
+    time:
+      type: unfeaturized
+    loop:
+      type: unfeaturized
+    requested_slot:
+      type: unfeaturized
+    round:
+      type: addons.rounds.Rounds
+    ask_medication:
+      type: unfeaturized
+    log_symptoms:
+      type: unfeaturized
+    ask_doctor:
+      type: unfeaturized
+    symptoms:
+      type: unfeaturized
+    vitals:
+      type: unfeaturized
+    name:
+      type: unfeaturized
+    phone:
+      type: unfeaturized
+    first_pain:
+      type: categorical
+      values:
+        - yes
+        - no
+    sos_medicine:
+      type: unfeaturized
+    pain:
+      type: unfeaturized
+    bt_sub_flow:
+      type: categorical
+      values:
+        - workout
+        - morning
+        - midday
+        - evening
+        - night
+    frequency :
+      type: categorical
+      values:
+        - daily
+        - occasionaly
+        - frequently
+    recheck:
+      type: unfeaturized
+    frequency_again:
+      type: categorical
+      values:
+        - daily
+        - occasionaly
+        - frequently
+
+actions:
+  - action_improve_experience
+  - action_ask_smoke
+  - action_often_smoke
+  - action_ask_drink
+  - action_often_drink
+  - action_often_work_out
+  - action_work_out_intence
+  - action_comeback_later
+  - action_thank_you
+  - action_work_out
+  - acion_often_work_out
+  - acion_thank_you
+  - action_configured
+  - action_round
+  - action_recommend
+  - action_deny_recommend
+  - action_last_sleep_night
+  - action_ask_doctor_support
+  - action_ask_changes
+  - action_configure_flow
+  - action_new_treatment_flow
+  - action_regular_nursing_round_flow
+  - action_pre_workout_flow
+  - action_post_workout_flow
+  - action_experience_pain
+  - action_rock_tomorrow
+  - action_first_pain
+  - action_report_about_pain
+  - action_because_of_pain
+  - action_same_pain
+  - action_bed_time_flow
+  - action_missing_workout_info
+  - action_missing_pre_breakfast_info
+  - action_missing_post_breakfast_info
+  - action_missing_pre_lunch_info
+  - action_missing_post_lunch_info
+  - action_missing_pre_dinner_info
+  - action_missing_post_dinner_info
+  - action_good_night
+  - action_sos
+  - action_wakeup_flow
+  - action_pre_breakfast_flow
+  - action_post_breakfast_flow
+  - action_pre_lunch_flow
+  - action_post_lunch_flow
+  - action_pre_dinner_flow
+  - action_post_dinner_flow
+  - action_remind_test_followup
+  - action_restart
+  - action_default_fallback
+  - action_change_routine
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_get_routine:
+  - text: 'Please type the task timings or lifestyle activity you want to change. \nFor example, Change my breakfast time'
+  utter_end_lifestyle:
+    - text: "Thank you for updating the lifestyle. Your input has been recorded successfully."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  utter_sleep_timings:
+  - text: "First we will cover your sleep timings."
+  utter_meal_timings:
+  - text: "Next is your meal timings."
+  utter_remind:
+  - text: "Sure! I will remind you again."
+  utter_great:
+  - text: "Great! Let's keep working on your recovery."
+  utter_not_great:
+  - text: "I am sorry! I hope, it'll get better as we move along in your treatment."
+  utter_default:
+  - text: "Sorry !! I dint get you, can you please start again."
+  utter_thanks:
+  - text: "You are welcome ☺"
+  - text: "Happy to assist you ☺"
+  - text: "Happy to help you ☺"
+  - text: "ok ☺"
+  - text: "☺"
+
+forms:
+  - form_sleep_time
+  - form_meal_time
+  - form_ask_smoke
+  - form_ask_drink
+  - form_ask_workout
+  - form_changes
+  - form_behavior_changes
+  - form_doctor_support
+  - form_pre_post_meal
+  - form_bedtime_symptoms
+  - form_missing_workout_info
+  - form_missing_day_info
+  - form_sos
+  - form_about_pain
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
