@@ -54,7 +54,7 @@ if __name__ =='__main__':
     print(SenderID.len())
     id = SenderID.createID("Nitin", "1223465", "a1")
     print(id, SenderID.len())
-    id = SenderID.createID("Nitinn", "1223457", "a1")
+    id = SenderID.createID("Nitin", "1223457", "a1")
     print(id, SenderID.len())
     id = SenderID.createID("Nitin", "1234657", "a1")
     print(id, SenderID.len())
