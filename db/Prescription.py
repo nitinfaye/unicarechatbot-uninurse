@@ -383,7 +383,7 @@ class Prescription(Base.BaseSerializable):
 
 if __name__ == '__main__':
 
-    rx = Prescription(patient_name='Irfan124678', dr_name='Dr. Mehta', mobile_no=1234556789, diagnosis=' Headache', diet_considerations='no-Alcohol no-Smoke')
+    rx = Prescription(patient_name='Nitin124678', dr_name='Dr. Sanap', mobile_no=1234556789, diagnosis=' Headache', diet_considerations='no-Alcohol no-Smoke')
     med1 = Medicine(name='Med1', comment=' for fever', timing='breakfast', quantity=1, duration=5, frequency=1)
     med2 = Medicine(name='Med1', comment=' for fever', timing='lunch', quantity=1, duration=5, frequency=1)
     med3 = Medicine(name='Med2', comment=' for fever', timing='dinner', quantity=1, duration=5)

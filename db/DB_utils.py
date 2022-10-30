@@ -98,10 +98,10 @@ def addOneConvo(input: dict):
 def createSampleDB():
     db = getDB(db_name)
 
-    names = ['Irfan', 'Saba', 'Prasanta', 'Nitin', 'Azra','Ramesh', 'Mahesh', 'Suresh', 'Dinesh', 'Rakesh', 'Rajesh']
-    dr_name = ['Dr. Prasanta', 'Dr. Nitin', 'Dr. Khan', 'Dr. Gupta', 'Dr. Dutta']
+    names = ['Sunil', 'Ankita', 'Prashant', 'Nitin', 'Amol','Ramesh', 'Mahesh', 'Suresh', 'Dinesh', 'Rakesh', 'Rajesh']
+    dr_name = ['Dr.Prashant More', 'Dr. Shankar Sanap', 'Dr.Pravin Shine', 'Dr.Gupta ', 'Dr. Saroj Kushawha']
     diagnosed = ['Diagnosis 1', 'Diagnosis 2', 'Diagnosis 3', 'Diagnosis 4']
-    hospital_name = ['Apollo Hospital', 'Nawaz Hospital', 'Pulse Hospital', 'Greater Kailaash Hospital', 'Bombay Hospital']
+    hospital_name = ['Unicare Hospital','Apollo Hospital', 'Nawaz Hospital', 'Pulse Hospital', 'Greater Kailaash Hospital', 'Bombay Hospital']
     rx = createSampleRxDB()
     for x in range(1, 501):
         name = names[randint(0, (len(names)-1))]
@@ -135,7 +135,7 @@ def createSampleDB():
 
 
 def createSampleRxDB():
-    rx = Prescription(patient_name='Irfan', dr_name='Dr. Mehta', mobile_no=1234556789, diagnosis=' Headache', diet_considerations='no-Alcohol no-Smoke')
+    rx = Prescription(patient_name='Nitin', dr_name='Dr. More', mobile_no=1234556789, diagnosis=' Headache', diet_considerations='no-Alcohol no-Smoke')
     med1 = Medicine(name='Med1', comment=' for fever', timing='breakfast', quantity=1, duration=5)
     med2 = Medicine(name='Med1', comment=' for fever', timing='lunch', quantity=1, duration=5)
     med3 = Medicine(name='Med1', comment=' for fever', timing='dinner', quantity=1, duration=5)
