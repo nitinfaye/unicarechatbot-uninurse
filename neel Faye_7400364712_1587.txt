@@ -1,0 +1,9 @@
+action : action_session_start 
+action : action_listen 
+user : OK DigiNurse 
+action : action_round 
+slot : round |  pre_workout 
+slot : name |  neel Faye 
+slot : phone |  7400364712 
+action : action_pre_workout_flow 
+bot : You must me gearing up for your workout session. Make sure you do not put high exertion on your body. 'Here are the GIfs of the exercises recommended by your doctor.' Try to follow these Gifs as much as possible while exercising. 
