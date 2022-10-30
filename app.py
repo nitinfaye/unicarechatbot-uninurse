@@ -25,7 +25,7 @@ def save_convo(resp, name, phone, flow, sender_id):
 #     return sender_id
 
 
-# _name = "Samson"
+# _name = "Nitin"
 # _phone = 9873664005
 # _type = None
 # sender = randint(1000, 10000)
