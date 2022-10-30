@@ -241,7 +241,9 @@
 - frequently
 - occasionally
 ##intent:digi_nurse_flow
+- Ok Uninurse
 - Ok DigiNurse
+- Uninurse
 - DigiNurse
 - Digi Nurse
 - Nurse
